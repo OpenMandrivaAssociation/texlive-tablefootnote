@@ -1,11 +1,11 @@
-# revision 24536
+# revision 24681
 # category Package
 # catalog-ctan /macros/latex/contrib/tablefootnote
-# catalog-date 2011-11-07 07:56:14 +0100
+# catalog-date 2011-11-28 11:55:23 +0100
 # catalog-license lppl1.3
-# catalog-version 1.0c
+# catalog-version 1.0e
 Name:		texlive-tablefootnote
-Version:	1.0c
+Version:	1.0e
 Release:	1
 Summary:	Permit footnotes in tables
 Group:		Publishing
@@ -18,9 +18,6 @@ BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
-Conflicts:	texlive-texmf <= 20110705-3
-Conflicts:	texlive-doc <= 20110705-3
-Conflicts:	texlive-source <= 20110705-3
 
 %description
 The package provides the command \tablefootnote to be used in a
@@ -29,19 +26,19 @@ work (and when using \footnotemark and \footnotetext, and
 adjusting the counter as necessary, is too much work.
 
 %pre
-    %_texmf_mktexlsr_pre
+    %{_sbindir}/texlive.post
 
 %post
-    %_texmf_mktexlsr_post
+    %{_sbindir}/texlive.post
 
 %preun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_pre
+	%{_sbindir}/texlive.post
     fi
 
 %postun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_post
+	%{_sbindir}/texlive.post
     fi
 
 #-----------------------------------------------------------------------
