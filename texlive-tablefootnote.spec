@@ -25,16 +25,8 @@ table or sidewaystableenvironment, where \footnote will not
 work (and when using \footnotemark and \footnotetext, and
 adjusting the counter as necessary, is too much work.
 
-%pre
-    %{_sbindir}/texlive.post
-
 %post
     %{_sbindir}/texlive.post
-
-%preun
-    if [ $1 -eq 0 ]; then
-	%{_sbindir}/texlive.post
-    fi
 
 %postun
     if [ $1 -eq 0 ]; then
@@ -52,7 +44,6 @@ adjusting the counter as necessary, is too much work.
 %doc %{_texmfdistdir}/source/latex/tablefootnote/tablefootnote.drv
 %doc %{_texmfdistdir}/source/latex/tablefootnote/tablefootnote.dtx
 %doc %{_texmfdistdir}/source/latex/tablefootnote/tablefootnote.ins
-%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -63,5 +54,3 @@ adjusting the counter as necessary, is too much work.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
-mkdir -p %{buildroot}%{_tlpkgobjdir}
-cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
