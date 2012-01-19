@@ -1,12 +1,12 @@
-# revision 24681
+# revision 25123
 # category Package
 # catalog-ctan /macros/latex/contrib/tablefootnote
-# catalog-date 2011-11-28 11:55:23 +0100
+# catalog-date 2012-01-16 13:51:27 +0100
 # catalog-license lppl1.3
-# catalog-version 1.0e
+# catalog-version 1.0g
 Name:		texlive-tablefootnote
-Version:	1.0e
-Release:	2
+Version:	1.0g
+Release:	1
 Summary:	Permit footnotes in tables
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/tablefootnote
