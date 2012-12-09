@@ -54,3 +54,27 @@ adjusting the counter as necessary, is too much work.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Wed Aug 08 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.0h-1
++ Revision: 812888
+- Update to latest release.
+
+* Thu Jan 19 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.0g-1
++ Revision: 762727
+- Update to latest upstream package
+
+* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.0e-2
++ Revision: 756430
+- Rebuild to reduce used resources
+
+* Fri Dec 09 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.0e-1
++ Revision: 739921
+- texlive-tablefootnote
+
+* Thu Nov 10 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.0c-1
++ Revision: 729698
+- texlive-tablefootnote
+- texlive-tablefootnote
+
