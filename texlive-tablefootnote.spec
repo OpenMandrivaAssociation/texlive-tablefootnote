@@ -1,12 +1,12 @@
-# revision 27256
+# revision 32804
 # category Package
 # catalog-ctan /macros/latex/contrib/tablefootnote
-# catalog-date 2012-07-30 11:22:32 +0200
+# catalog-date 2014-01-21 19:24:06 +0100
 # catalog-license lppl1.3
-# catalog-version 1.0h
+# catalog-version 1.1b
 Name:		texlive-tablefootnote
-Version:	1.0h
-Release:	5
+Version:	1.1b
+Release:	1
 Summary:	Permit footnotes in tables
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/tablefootnote
@@ -21,9 +21,9 @@ Requires(post):	texlive-kpathsea
 
 %description
 The package provides the command \tablefootnote to be used in a
-table or sidewaystableenvironment, where \footnote will not
+table or sidewaystable environment, where \footnote will not
 work (and when using \footnotemark and \footnotetext, and
-adjusting the counter as necessary, is too much work.
+adjusting the counter as necessary, is too much work).
 
 %post
     %{_sbindir}/texlive.post
@@ -54,27 +54,3 @@ adjusting the counter as necessary, is too much work.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Aug 08 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.0h-1
-+ Revision: 812888
-- Update to latest release.
-
-* Thu Jan 19 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.0g-1
-+ Revision: 762727
-- Update to latest upstream package
-
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.0e-2
-+ Revision: 756430
-- Rebuild to reduce used resources
-
-* Fri Dec 09 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.0e-1
-+ Revision: 739921
-- texlive-tablefootnote
-
-* Thu Nov 10 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.0c-1
-+ Revision: 729698
-- texlive-tablefootnote
-- texlive-tablefootnote
-
