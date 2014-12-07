@@ -6,7 +6,7 @@
 # catalog-version 1.1b
 Name:		texlive-tablefootnote
 Version:	1.1b
-Release:	3
+Release:	4
 Summary:	Permit footnotes in tables
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/tablefootnote
