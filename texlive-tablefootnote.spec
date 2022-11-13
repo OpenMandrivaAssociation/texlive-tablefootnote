@@ -1,19 +1,13 @@
-# revision 32804
-# category Package
-# catalog-ctan /macros/latex/contrib/tablefootnote
-# catalog-date 2014-01-21 19:24:06 +0100
-# catalog-license lppl1.3
-# catalog-version 1.1b
 Name:		texlive-tablefootnote
-Version:	1.1c
-Release:	2
+Version:	32804
+Release:	1
 Summary:	Permit footnotes in tables
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/tablefootnote
 License:	LPPL1.3
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tablefootnote.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tablefootnote.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tablefootnote.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tablefootnote.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tablefootnote.doc.r%{version}.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tablefootnote.source.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -26,12 +20,12 @@ work (and when using \footnotemark and \footnotetext, and
 adjusting the counter as necessary, is too much work).
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -47,7 +41,8 @@ adjusting the counter as necessary, is too much work).
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
