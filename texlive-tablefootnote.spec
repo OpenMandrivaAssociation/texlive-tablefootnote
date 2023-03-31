@@ -1,6 +1,6 @@
 Name:		texlive-tablefootnote
 Version:	32804
-Release:	1
+Release:	2
 Summary:	Permit footnotes in tables
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/tablefootnote
